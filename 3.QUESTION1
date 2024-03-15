@@ -1,0 +1,26 @@
+import pandas as pd
+
+# Sample DataFrame
+data = {'Name': ['John', 'Alice', 'Bob', 'Diana'],
+        'Age': [25, 30, 35, 40]}
+df = pd.DataFrame(data)
+
+# Function to swap case of a specified column
+def swap_case_column(df, column_name):
+    if column_name not in df.columns:
+        print(f"Column '{column_name}' does not exist in the DataFrame.")
+        return df
+    df[column_name] = df[column_name].str.swapcase()
+    return df
+
+# Specified column to swap case
+column_to_swap = 'Name'
+
+# Call the function to swap case
+df_swapped = swap_case_column(df, column_to_swap)
+
+print("Original DataFrame:")
+print(df)
+
+print("\nDataFrame with swapped cases:")
+print(df_swapped)
