@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Sample data
+groups = ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5']
+means_men = [22, 30, 35, 35, 26]
+means_women = [25, 32, 30, 35, 29]
+
+# Width of the bars
+bar_width = 0.35
+
+# Generating X positions for the bars
+x_men = np.arange(len(groups))
+x_women = [x + bar_width for x in x_men]
+
+# Creating the bar plot
+plt.figure(figsize=(10, 6))
+plt.bar(x_men, means_men, width=bar_width, label='Men')
+plt.bar(x_women, means_women, width=bar_width, label='Women')
+
+# Adding labels and title
+plt.xlabel('Groups')
+plt.ylabel('Scores')
+plt.title('Scores by Group and Gender')
+plt.xticks(x_men + bar_width / 2, groups)
+plt.legend()
+
+# Displaying the plot
+plt.grid(axis='y')
+plt.tight_layout()
+plt.show()
