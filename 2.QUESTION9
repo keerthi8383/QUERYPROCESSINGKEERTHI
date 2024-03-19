@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Assuming you have already loaded the World alcohol consumption dataset into a DataFrame named 'df'
+# Replace 'df' with the name of your DataFrame if different
+
+# Displaying the dimensions (shape) of the DataFrame
+print("Dimensions of the World alcohol consumption dataset:")
+print("Number of rows:", df.shape[0])
+print("Number of columns:", df.shape[1])
+
+# Extracting column names from the dataset
+column_names = df.columns.tolist()
+
+# Displaying the column names
+print("\nColumn names of the World alcohol consumption dataset:")
+print(column_names)
