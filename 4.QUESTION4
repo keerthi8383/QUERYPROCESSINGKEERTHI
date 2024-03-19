@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generating random data
+np.random.seed(0)  # for reproducibility
+x = np.random.rand(50)  # 50 random numbers between 0 and 1 for x-coordinates
+y = np.random.rand(50)  # 50 random numbers between 0 and 1 for y-coordinates
+sizes = np.random.randint(10, 300, 50)  # 50 random sizes between 10 and 300 for the balls
+
+# Plotting the scatter graph with random sizes
+plt.scatter(x, y, s=sizes)
+
+# Adding labels and title
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Scatter Plot with Random Sizes')
+
+# Display the plot
+plt.show()
